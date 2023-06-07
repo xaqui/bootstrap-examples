@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--sin este viewport NO HAY DISEÑO RESPONSIVE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--linkado a un repositorio-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--Linkado a iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <title>Product</title>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .product-box-navy {
+            background: linear-gradient(rgba(92, 70, 156, 0.7), rgba(90, 83, 139, 0.7));
+            color: aliceblue;
+        }
+
+        .product-box-red {
+            background: linear-gradient(rgba(234, 146, 124, 0.7), rgba(196, 45, 37, 0.7));
+            color: lavenderblush;
+        }
+
+        .product-box-green {
+            background: linear-gradient(rgba(99, 184, 93, 0.7), rgba(74, 184, 112, 0.7));
+        }
+
+        .product-box-blue {
+            background: linear-gradient(rgba(92, 70, 156, 0.7), rgba(71, 108, 156, 0.7));
+            color: aliceblue;
+        }
+
+        .product-box-sunrise {
+            background: linear-gradient(rgba(250, 205, 131, 0.7), rgba(95, 158, 234, 0.7));
+        }
+
+        .product-box-sunset {
+            background: linear-gradient(rgba(29, 55, 143, 0.7), rgba(51, 204, 204, 0.7));
+        }
+
+        .product-box-jade {
+            background: linear-gradient(rgba(85, 225, 174, 0.7), rgba(255, 76, 76, 0.7));
+            color: lavenderblush;
+        }
+
+        .price {
+            font-size: 1.5rem;
+        }
+
+        .bg-img {
+            position: relative;
+        }
+
+        .bg-img::before {
+            content: "";
+            background-image: url('img/skybox.png');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header sticky-top py-1">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+            <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Jumbotron</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Carousel</a>
+            <a class="py-2 d-none d-md-inline-block" href="#"><button type="button" class="px-4 btn btn-secondary"><i
+                        class="bi bi-cart3"></i>&nbsp;Cart</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="py-5 text-center bg-img">
+            <div class="col-md-5 p-lg-5 mx-auto my-5 op-100">
+                <h1 class="display-4 fw-normal">Welcome!</h1>
+                <p class="lead fw-normal">Shop around by moving &nbsp;<i class="bi bi-joystick"></i>&nbsp; left or
+                    right.</p>
+                <a class="btn btn-primary" href="#">Talk to the owner</a>
+            </div>
+        </div>
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="product-box-navy me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
+                <div>
+                    <img src="img/hylian shield.png" height="256" />
+                </div>
+
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Hylian Shield</h2>
+                    <p class="lead">This is a big, heavy shield just like the ones Hylian Knights use. It can stand up
+                        to flame attacks.</p>
+                    <p class="price mx-auto"><span><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                                viewBox="0 0 24 25">
+                                <path fill="none" stroke="currentColor" d="M12 2l5 3v8l-5 3-5-3V5l5-3z"
+                                    transform="scale(1, 1.2)" />
+                                <path fill="none" stroke="currentColor" stroke-width="1.6"
+                                    d="M12 2l5 3v8l-5 3-5-3V5l5-3z" transform="translate(6, 4.5) scale(0.5, .7)" />
+                            </svg>
+                        </span>80</p>
+                    <div class="d-flex flex-column">
+                        <div class="my-1"> <button type="button" class="btn btn-dark w-25">See Details</button>
+                        </div>
+                        <div class="my-1"> <button type="button" class="btn btn-light w-25">Add to Cart <i
+                                    class="bi bi-cart3"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="product-box-blue me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
+                <div>
+                    <img src="img/quiver.png" height="256" />
+                </div>
+
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Arrows</h2>
+                    <p class="lead">You need a bow to shoot them. You can't buy them unless you have a bow.</p>
+                    <p class="price mx-auto"><span><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                                viewBox="0 0 24 25">
+                                <path fill="none" stroke="currentColor" d="M12 2l5 3v8l-5 3-5-3V5l5-3z"
+                                    transform="scale(1, 1.2)" />
+                                <path fill="none" stroke="currentColor" stroke-width="1.6"
+                                    d="M12 2l5 3v8l-5 3-5-3V5l5-3z" transform="translate(6, 4.5) scale(0.5, .7)" />
+                            </svg>
+                        </span>90</p>
+                    <div class="d-flex flex-column">
+                        <div class="my-1"> <button type="button" class="btn btn-dark w-25">See Details</button>
+                        </div>
+                        <div class="my-1"> <button type="button" class="btn btn-light w-25">Add to Cart <i
+                                    class="bi bi-cart3"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="product-box-sunset me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
+                <div>
+                    <img src="img/zora tunic.png" height="256" />
+                </div>
+
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Zora Tunic</h2>
+                    <p class="lead">This diving suit is adult size, so it won't fit a kid. Wear it, and you won't drown
+                        underwater.</p>
+                    <p class="price mx-auto"><span><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                                viewBox="0 0 24 25">
+                                <path fill="none" stroke="currentColor" d="M12 2l5 3v8l-5 3-5-3V5l5-3z"
+                                    transform="scale(1, 1.2)" />
+                                <path fill="none" stroke="currentColor" stroke-width="1.6"
+                                    d="M12 2l5 3v8l-5 3-5-3V5l5-3z" transform="translate(6, 4.5) scale(0.5, .7)" />
+                            </svg>
+                        </span>300</p>
+                    <div class="d-flex flex-column">
+                        <div class="my-1"> <button type="button" class="btn btn-dark w-25">See Details</button>
+                        </div>
+                        <div class="my-1"> <button type="button" class="btn btn-light w-25">Add to Cart <i
+                                    class="bi bi-cart3"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="product-box-green me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
+                <div>
+                    <img src="img/deku shield.png" height="256" />
+                </div>
+
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Deku Shield</h2>
+                    <p class="lead">Once equipped, you can defend with R Button. If set on fire, it will burn.</p>
+                    <p class="price mx-auto"><span><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                                viewBox="0 0 24 25">
+                                <path fill="none" stroke="currentColor" d="M12 2l5 3v8l-5 3-5-3V5l5-3z"
+                                    transform="scale(1, 1.2)" />
+                                <path fill="none" stroke="currentColor" stroke-width="1.6"
+                                    d="M12 2l5 3v8l-5 3-5-3V5l5-3z" transform="translate(6, 4.5) scale(0.5, .7)" />
+                            </svg>
+                        </span>40</p>
+                    <div class="d-flex flex-column">
+                        <div class="my-1"> <button type="button" class="btn btn-dark w-25">See Details</button>
+                        </div>
+                        <div class="my-1"> <button type="button" class="btn btn-light w-25">Add to Cart <i
+                                    class="bi bi-cart3"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="product-box-red me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
+                <div>
+                    <img src="img/goron tunic.png" height="256" />
+                </div>
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Goron Tunic</h2>
+                    <p class="lead">Heat-resistant attire, crafted by the Gorons. You'll never feel too hot while
+                        wearing it.</p>
+                    <p class="price mx-auto"><span><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                                viewBox="0 0 24 25">
+                                <path fill="none" stroke="currentColor" d="M12 2l5 3v8l-5 3-5-3V5l5-3z"
+                                    transform="scale(1, 1.2)" />
+                                <path fill="none" stroke="currentColor" stroke-width="1.6"
+                                    d="M12 2l5 3v8l-5 3-5-3V5l5-3z" transform="translate(6, 4.5) scale(0.5, .7)" />
+                            </svg>
+                        </span>300</p>
+                    <div class="d-flex flex-column">
+                        <div class="my-1"> <button type="button" class="btn btn-dark w-25">See Details</button>
+                        </div>
+                        <div class="my-1"> <button type="button" class="btn btn-light w-25">Add to Cart <i
+                                    class="bi bi-cart3"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="product-box-jade me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
+                <div>
+                    <img src="img/heart piece.png" height="256" />
+                </div>
+
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Piece of Heart</h2>
+                    <p class="lead">Fractions of a full Heart Container. Collect four and gain an additional Heart
+                        Containers.</p>
+                    <p class="price mx-auto"><span><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                                viewBox="0 0 24 25">
+                                <path fill="none" stroke="currentColor" d="M12 2l5 3v8l-5 3-5-3V5l5-3z"
+                                    transform="scale(1, 1.2)" />
+                                <path fill="none" stroke="currentColor" stroke-width="1.6"
+                                    d="M12 2l5 3v8l-5 3-5-3V5l5-3z" transform="translate(6, 4.5) scale(0.5, .7)" />
+                            </svg>
+                        </span>10</p>
+                    <div class="d-flex flex-column">
+                        <div class="my-1"> <button type="button" class="btn btn-dark w-25">See Details</button>
+                        </div>
+                        <div class="my-1"> <button type="button" class="btn btn-light w-25">Add to Cart <i
+                                    class="bi bi-cart3"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="product-box-sunrise me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
+                <div>
+                    <img src="img/empty bottle.png" height="256" />
+                </div>
+
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Empty Bottle</h2>
+                    <p class="lead">It can contain different things. It would be a shame not to use it!</p>
+                    <p class="price mx-auto"><span><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                                viewBox="0 0 24 25">
+                                <path fill="none" stroke="currentColor" d="M12 2l5 3v8l-5 3-5-3V5l5-3z"
+                                    transform="scale(1, 1.2)" />
+                                <path fill="none" stroke="currentColor" stroke-width="1.6"
+                                    d="M12 2l5 3v8l-5 3-5-3V5l5-3z" transform="translate(6, 4.5) scale(0.5, .7)" />
+                            </svg>
+                        </span>100</p>
+                    <div class="d-flex flex-column">
+                        <div class="my-1"> <button type="button" class="btn btn-dark w-25">See Details</button>
+                        </div>
+                        <div class="my-1"> <button type="button" class="btn btn-light w-25">Add to Cart <i
+                                    class="bi bi-cart3"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="product-box-sunrise me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
+                <div>
+                    <img src="img/beans.png" height="256" />
+                </div>
+
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Magic Beans</h2>
+                    <p class="lead">Find a suitable spot for a garden and plant it with (C). Then, wait for something
+                        fun to happen!</p>
+                    <p class="price mx-auto"><span><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
+                                viewBox="0 0 24 25">
+                                <path fill="none" stroke="currentColor" d="M12 2l5 3v8l-5 3-5-3V5l5-3z"
+                                    transform="scale(1, 1.2)" />
+                                <path fill="none" stroke="currentColor" stroke-width="1.6"
+                                    d="M12 2l5 3v8l-5 3-5-3V5l5-3z" transform="translate(6, 4.5) scale(0.5, .7)" />
+                            </svg>
+                        </span>10</p>
+                    <div class="d-flex flex-column">
+                        <div class="my-1"> <button type="button" class="btn btn-dark w-25">See Details</button>
+                        </div>
+                        <div class="my-1"> <button type="button" class="btn btn-light w-25">Add to Cart <i
+                                    class="bi bi-cart3"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <small>
+                    <p class="mb-1 text-secondary">Joaquín Barreiro García</p>
+                </small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Cool stuff</a></li>
+                    <li><a class="link-secondary" href="#">Random feature</a></li>
+                    <li><a class="link-secondary" href="#">Team feature</a></li>
+                    <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+                    <li><a class="link-secondary" href="#">Another one</a></li>
+                    <li><a class="link-secondary" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Resource name</a></li>
+                    <li><a class="link-secondary" href="#">Resource</a></li>
+                    <li><a class="link-secondary" href="#">Another resource</a></li>
+                    <li><a class="link-secondary" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Business</a></li>
+                    <li><a class="link-secondary" href="#">Education</a></li>
+                    <li><a class="link-secondary" href="#">Government</a></li>
+                    <li><a class="link-secondary" href="#">Gaming</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Team</a></li>
+                    <li><a class="link-secondary" href="#">Locations</a></li>
+                    <li><a class="link-secondary" href="#">Privacy</a></li>
+                    <li><a class="link-secondary" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="mb-1 float-end">
+            <a href="#">Volver arriba</a>
+        </p>
+    </footer>
+
+    <!--linkado a el js de bootstrap, siempre ultima linea-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" />
+</body>
+
+</html>

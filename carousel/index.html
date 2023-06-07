@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Joaquin Barreiro Garcia">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Carousel</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png"
+        sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+        type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+        type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/safari-pinned-tab.svg"
+        color="#7952b3">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/index.css" rel="stylesheet">
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Carousel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Album</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Plantilla</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-color-cn-red" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="white"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-0" role="img"
+                                viewBox="0 0 24 24">
+                                <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                                <path d="M21 21l-5.2-5.2"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-label="Slide 1" aria-current="true"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                    class=""></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                    class=""></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-bg">
+                        <img src="img/cup_cn.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                    </div>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <div class="mx-auto d-flex justify-content-center w-25 pb-4">
+                                <img src="img/logo_cn.png" height="150">
+                            </div>
+                            <div class="mx-auto d-flex justify-content-center w-25">
+                                <img src="img/package_cn.png" width="330">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-bg">
+                        <img alt="" src="img/cup_curry.png" width="100%" height="100%"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                    </div>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <div class="mx-auto d-flex justify-content-center w-25 pb-4">
+                                <img src="img/logo_curry.png" height="150">
+                            </div>
+                            <div class="mx-auto d-flex justify-content-center w-25">
+                                <img src="img/package_curry.png" width="330">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-bg">
+                        <img alt="" src="img/cup_karamen.png" width="100%" height="100%"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                    </div>
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <div class="mx-auto d-flex justify-content-center w-25 pb-4">
+                                <img src="img/logo_karamen.png" height="150">
+                            </div>
+                            <div class="mx-auto d-flex justify-content-center w-25">
+                                <img src="img/package_karamen.png" width="330">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#292b2c"
+                        class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                    </svg>
+                </span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#292b2c"
+                        class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                </span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        <!-- Marketing messaging and featurettes
+  ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+
+                    <img class="rounded-circle" src="img/gladio.png" width="140" height="140"
+                        preserveAspectRatio="xMidYMid slice" alt="" />
+
+                    <h3>Gladio</h3>
+                    <p>Algo me vino a la mente cuando estaba solo: ¿no sabe mejor cualquier comida que prepares cuando
+                        usas buenos ingredientes? Entonces, si tomas algo ya delicioso como Cup Noodles ™ y le agregas
+                        los ingredientes más finos y frescos, ¿qué obtienes? ¡La experiencia de sabor definitiva!</p>
+                    <p><a class="btn btn-secondary" href="#">Ver más »</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="img/images.jpg" width="140" height="140"
+                        preserveAspectRatio="xMidYMid slice" alt="" />
+                    <h3>Akuma</h3>
+                    <p>¡Cup Noodles™ es la comida más brutal en la que he hincado mis dientes! ¡Su sabor es intenso y
+                        salvaje, y me hace sentir vivo! ¡Los fideos son como una sinfonía en mi boca, y las salsas son
+                        como una lluvia de fuego! ¡Cup Noodles™ es mi droga de elección, y no puedo vivir sin ella!
+                        ¡¡¡GRRRAAAAAAAHHHHHHHHH!!!</p>
+                    <p><a class="btn btn-secondary" href="#">Ver más »</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="img/noodle_ouji_3.jpg" width="140" height="140"
+                        preserveAspectRatio="xMidYMid slice" alt="" />
+
+
+                    <h3>Príncipe de los Noodles</h3>
+                    <p>Como el Príncipe de los Noodles, sé lo que hace que un tazón de fideos instantáneos sea
+                        realmente excepcional. Y déjame decirte, Cup Noodles™ es la joya de la corona. Con su sabor
+                        intenso y su textura perfecta, es una comida rápida que realmente hace honor a su nombre.</p>
+                    <p><a class="btn btn-secondary" href="#">Ver más »</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Tres flexiones despues de comer fideos.</h2>
+                    <p class="lead">¿Puedes creer que estos fideos los cocinamos en menos de cinco minutos? Encima
+                        tienen un sabor delicioso, tío</p>
+                    <div class="row d-flex py-3">
+                        <div class="col-6">
+                            <a href="https://www.nissin.com/jp/products/items/10829">
+                                <button type="button" class="btn btn-light w-100">Mas Información</button>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="https://store.nissin.com/collections/cupnoodle/">
+                                <button type="button" class="btn btn-color-cn-red w-100">Tienda Online</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5">
+                    <img alt="" class=" rounded img-fluid mx-auto" src="img/item10829.jpg" height="500"
+                        preserveAspectRatio="xMidYMid slice" />
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Naranjas de la china. <span class="text-muted">Al menos tres al
+                            día</span></h2>
+                    <p class="lead">Tío, estos fideos están como para flipar. Tan rápidos y sabrosos, ¿quién necesita un
+                        chef</p>
+                </div>
+                <div class="col-md-5">
+                    <img alt="" class=" rounded img-fluid mx-auto" src="img/Kumquat.jpg" height="500"
+                        preserveAspectRatio="xMidYMid slice" />
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Aquí yace un sitio web dedicado a los fideos <span
+                            class="text-muted">¡Siempre al dente!</span></h2>
+                    <p class="lead">No me jodas, estos fideos son el mejor munchies de todos. Y lo mejor es que no
+                        tienes que esperar demasiado</p>
+                </div>
+                <div class="col-md-5">
+                    <img alt="" class=" rounded img-fluid mx-auto" src="img/noodle_ouji_2.jpg" height="500"
+                        preserveAspectRatio="xMidYMid slice" />
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+
+
+        <!-- FOOTER -->
+        <footer class="text-muted py-5">
+            <div class="container">
+                <p class="float-end mb-1">
+                    <a href="#">Volver arriba</a>
+                </p>
+                <p class="mb-1">Joaquín Barreiro García</p>
+            </div>
+        </footer>
+    </main>
+
+
+
+
+
+</body>
+
+</html>

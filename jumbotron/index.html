@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Joaquin Barreiro Garcia">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Jumbotron Template</title>
+
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/apple-touch-icon.png"
+        sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+        type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+        type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/safari-pinned-tab.svg"
+        color="#712cf9">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        #jumbo-img-1 {
+            position: relative;
+            background-image: url('img/6445142.jpg');
+            background-size: cover;
+            width: 100%;
+        }
+
+        #jumbo-img-2 {
+            position: relative;
+            background-image: url('img/kirt-victor-smol5.jpg');
+            background-size: cover;
+            width: 100%;
+        }
+
+        #jumbo-img-3 {
+            position: relative;
+            background-image: url('img/Kyoto-kinkakuji-winter.jpg');
+            background-size: cover;
+            width: 100%;
+        }
+
+
+        .bg-image-light::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255, .4));
+        }
+
+        .bg-image-dark::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, .4));
+        }
+
+        .jumbotron-content-light {
+            position: relative;
+            z-index: 1;
+        }
+
+        .jumbotron-content-dark {
+            position: relative;
+            z-index: 1;
+        }
+
+        .jumbotron-content-light p {
+            background-color: rgba(0, 0, 0, .5);
+            color: whitesmoke;
+        }
+
+        .jumbotron-content-dark p {
+            background-color: rgba(255, 255, 255, .5);
+            color: rgba(33, 37, 41, 1)
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <div class="container py-4">
+            <header class="pb-3 mb-4 border-bottom">
+                <div class="d-flex align-items-center text-dark text-decoration-none">
+                    <span class="fs-4 text-center mx-auto">Ejemplo de Jumbotron</span>
+                </div>
+            </header>
+
+            <div class="p-5 mb-4 rounded-3 bg-image-light" id="jumbo-img-1">
+                <div class="container-fluid py-5 m- jumbotron-content-light">
+                    <h1 class="display-5 fw-bold">Custom jumbotron</h1>
+                    <p class="col-md-8 fs-4 rounded p-3">Kyoto is a beautiful city in Japan known for its rich history
+                        and traditional culture. With its stunning temples, serene gardens, and delicious cuisine, Kyoto
+                        offers a unique experience for visitors. Explore the examples below to see how you can create a
+                        customized jumbotron inspired by Kyoto.</p>
+                    <button class="btn btn-primary btn-lg" type="button">Example button</button>
+                </div>
+            </div>
+
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6 rounded">
+                    <div class="h-100 p-5 text-bg-dark rounded-3 " id="jumbo-img-2">
+                        <div class="jumbotron-content-light">
+                            <h2>Change the background</h2>
+                            <p class=" rounded p-3">Immerse yourself in Kyoto's beauty by changing the background-color
+                                and adding a `.text-*` color utility to your jumbotron. Experiment with different
+                                component themes and create a unique look inspired by the vibrant city of Kyoto.</p>
+                            <button class="btn btn-outline-light" type="button">Example button</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 rounded">
+                    <div class="h-100 p-5 border rounded-3 " id="jumbo-img-3">
+                        <div class="jumbotron-content-dark">
+                            <h2>Add borders</h2>
+                            <p class=" rounded p-3">Embrace the elegance of Kyoto by adding borders to your jumbotron.
+                                Borders can provide a sense of definition and structure to your content, just like the
+                                boundaries that define Kyoto's historic districts. Take a closer look at the source HTML
+                                to see how the content alignment and sizing have been adjusted for equal-height columns.
+                            </p>
+                            <button class="btn btn-outline-secondary" type="button">Example button</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container pt-5">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Heading</h2>
+                        <p>Kyoto, the cultural capital of Japan, offers a unique blend of tradition and modernity.
+                            Immerse yourself in the serene beauty of Kyoto's temples and gardens, and experience the
+                            rich history and vibrant culture of this enchanting city. </p>
+                        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Heading</h2>
+                        <p>Discover the beauty of Kyoto through its jumbotron templates. Create stunning web designs
+                            inspired by Kyoto's aesthetic and ambiance. Let your creativity flow as you customize the
+                            jumbotron elements to match the spirit of this captivating city.  </p>
+                        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Heading</h2>
+                        <p>Experience the limitless possibilities of web development with ChatGPT. With its powerful
+                            generation capabilities, ChatGPT can assist you in creating engaging content for your
+                            jumbotron and other web design projects. Let ChatGPT unleash your creativity and bring your
+                            ideas to life. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+                        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="pt-3 mt-4 text-muted border-top">
+                <div class="container">
+                    <p class="float-end mb-1">
+                        <a href="#">Volver arriba</a>
+                    </p>
+                    <p class="mb-1">Joaquín Barreiro García</p>
+                </div>
+            </footer>
+        </div>
+
+
+    </main>
+
+
+
+
+    <!--linkado a el js de bootstrap, siempre ultima linea-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" />
+</body>
+
+</html>
